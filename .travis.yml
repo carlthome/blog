@@ -1,0 +1,14 @@
+language: python
+python: 3.6
+cache: pip
+install: pip install nikola[extras]
+script:
+- python download_gists.py
+- nikola build
+deploy:
+  provider: pages
+  skip-cleanup: true
+  github-token: $GITHUB_TOKEN
+  local-dir: output
+  target-branch: master
+  repo: carlthome.github.io
