@@ -11,4 +11,4 @@ deploy:
   github-token: $GITHUB_TOKEN
   local-dir: output
   target-branch: master
-  repo: carlthome.github.io
+  repo: carlthome/carlthome.github.io
