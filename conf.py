@@ -140,7 +140,7 @@ NAVIGATION_LINKS = {
 }
 
 # Name of the theme to use.
-THEME = 'canterville'
+THEME = 'custom_theme'
 LOGO_URL = 'https://getnikola.com/assets/img/logo.svg'
 GLOBAL_CONTEXT = {
     'TWITTER_URL': 'https://twitter.com/carlthome',
