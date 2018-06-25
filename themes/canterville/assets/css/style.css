@@ -1,0 +1,12 @@
+.highlight { 
+    background: none;
+}
+
+.rendered_html pre, .rendered_html code {
+    background: none;
+    line-height: 1.25em;
+}
+
+div.prompt {
+    background-color: #f7f7f7;
+}
