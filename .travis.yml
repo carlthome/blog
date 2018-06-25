@@ -2,7 +2,7 @@ language: python
 python: 3.6
 cache: pip
 install:
-- pip install git+https://github.com/getnikola/nikola.git
+- pip install git+https://github.com/getnikola/nikola.git[extras]
 - nikola subtheme -n custom_theme -s flatly -p bootstrap4
 script:
 - python download_gists.py
