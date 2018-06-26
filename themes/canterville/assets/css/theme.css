@@ -1,0 +1,53 @@
+pre {
+    line-height: 1.25em !important;
+    background: transparent !important;
+}
+
+.input pre {
+    background: #F7FAFB !important;
+    border-radius: 3px !important;
+}
+
+.rendered_html pre {
+    font-size: inherit !important;
+}
+
+.highlight {
+    background: transparent !important;
+    padding: .25em;
+}
+
+.text_cell_render .highlight {
+    background: transparent !important;
+}
+
+.prompt {
+    background-color: transparent !important;
+    margin: 0 !important;
+}
+
+.output pre {
+    font-size: 0.8em !important;
+    color: white !important;
+    background:black !important;
+    padding: 0.25em !important;
+    border-radius: 3px !important;
+    margin: 1em 0 !important;
+}
+
+.text_cell.rendered .rendered_html {
+    overflow: inherit !important;
+}
+
+.output_subarea {
+    max-width: none !important;
+    padding: 0 !important;
+}
+
+.output_prompt {
+    margin: 0 !important;
+}
+
+.post li {
+    font-size: 0.9em;
+}
