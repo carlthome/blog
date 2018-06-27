@@ -31,7 +31,7 @@
     </header>
     %if index_teasers:
     <section class="post-excerpt">
-    ${post.text(teaser_only=True)}
+    ${post.description()}
     %else:
     <section class="post-excerpt">
     ${post.text(teaser_only=False)}

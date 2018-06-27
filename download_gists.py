@@ -2,6 +2,8 @@ import os
 import json
 from urllib.request import urlopen, urlretrieve
 
+from rake_nltk import Rake
+
 with open('gists.txt') as f:
     gist_ids = f.read().split()
 
@@ -17,7 +19,12 @@ for gist in gists:
     urlretrieve(metadata['raw_url'], f'posts/{name}')
 
     title = os.path.splitext(name)[0]
+    description = gist['description']
     slug = title.replace(' ', '-').lower()
+
+    r = Rake()
+    r.extract_keywords_from_text(f'{title}. {description}')
+    tags = ','.join(r.get_ranked_phrases()[:3])
 
     with open(os.path.join('posts', title + '.meta'), 'w') as f:
         f.write(f"""\
@@ -25,6 +32,7 @@ for gist in gists:
 .. slug: {slug} 
 .. date: {gist['created_at']}
 .. updated: {gist['updated_at']}
-.. description: {gist['description']}
+.. description: {description}
 .. guid: {gist['id']}
-.. link: {gist['html_url']}""")
+.. link: {gist['html_url']}
+.. tags: {tags}""")

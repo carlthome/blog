@@ -1,7 +1,6 @@
 language: python
 python: 3.6
 cache: pip
-install: pip install "git+https://github.com/getnikola/nikola#egg=Nikola[extras]"
 script:
 - python download_gists.py
 - nikola build
