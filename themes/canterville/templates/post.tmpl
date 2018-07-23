@@ -29,6 +29,10 @@
 <%block name="content">
 
   <article class="post post">
+    <div style="text-align: center">
+        <a alt="Launch notebook in Binder" href="https://mybinder.org/v2/gist/carlthome/${post.guid()}/master"><img src="/assets/img/binder.svg" /></a>
+        <a alt="See Gist stars" href="https://gist.github.com/carlthome/${post.guid()}/stargazers"><img height="20" src="/assets/img/github.svg" /></a>
+    </div>
     <section class="post-content">
     ${post.text()}
     </section>

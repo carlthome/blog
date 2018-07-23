@@ -38,6 +38,7 @@ pre {
 .prompt {
     background-color: transparent !important;
     margin: 0 !important;
+    display: none;
 }
 
 .text_cell.rendered .rendered_html {
@@ -54,7 +55,7 @@ pre {
 }
 
 .post li {
-    font-size: 0.9em;
+    font-size: 1.8rem;
 }
 
 .pager  {
