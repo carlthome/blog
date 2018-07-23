@@ -3,3 +3,5 @@ rake-nltk
 nltk
 librosa
 tensorflow
+matplotlib
+h5py
