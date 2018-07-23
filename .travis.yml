@@ -6,6 +6,7 @@ addons:
 language: python
 python: 3.6
 cache: pip
+install: pip install tensorflow librosa
 script:
 - python download_gists.py
 - find posts -name "*.ipynb" | parallel 'jupyter nbconvert --to notebook --execute {}'
