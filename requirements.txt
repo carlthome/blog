@@ -1,6 +1,6 @@
 git+https://github.com/getnikola/nikola#egg=Nikola[extras]
-rake-nltk
 nltk
+rake-nltk
 librosa
 tensorflow
 matplotlib
