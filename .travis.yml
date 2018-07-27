@@ -2,6 +2,7 @@ addons:
   apt:
     update: true
     packages:
+    - libav-tools
     - parallel
 language: python
 python: 3.6
