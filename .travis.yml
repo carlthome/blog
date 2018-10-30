@@ -9,8 +9,7 @@ python: 3.6
 cache: pip
 script:
 - python download_gists.py
-# TODO Run notebooks. 
-#- find posts -name "*.ipynb" | parallel 'jupyter nbconvert --to notebook --ExecutePreprocessor.timeout=-1 --execute {}'
+- find posts -name "*.ipynb" | parallel 'jupyter nbconvert --to notebook --ExecutePreprocessor.timeout=-1 --execute {}'
 - nikola build
 deploy:
   provider: pages
