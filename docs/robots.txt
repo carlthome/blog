@@ -1,0 +1,4 @@
+Sitemap: https://carlthome.github.io/sitemapindex.xml
+
+User-Agent: *
+Host: carlthome.github.io

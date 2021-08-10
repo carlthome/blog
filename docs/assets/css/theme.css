@@ -1,0 +1,90 @@
+pre {
+    line-height: 1.25em !important;
+    background: transparent !important;
+}
+
+.output {
+    text-align: center;
+}
+
+.input pre {
+    background: #F7FAFB !important;
+    border-radius: 3px !important;
+}
+
+.output pre {
+    font-size: 0.8em !important;
+    color: white !important;
+    background:black !important;
+    padding: 0 0.25em !important;
+    border-radius: 3px !important;
+    margin: 1em 0 !important;
+    max-height: 50vh;
+}
+
+.rendered_html pre {
+    font-size: inherit !important;
+}
+
+.highlight {
+    background: transparent !important;
+    padding: .25em;
+}
+
+.text_cell_render .highlight {
+    background: transparent !important;
+}
+
+.prompt {
+    background-color: transparent !important;
+    margin: 0 !important;
+    display: none;
+}
+
+.text_cell.rendered .rendered_html {
+    overflow: inherit !important;
+}
+
+.output_subarea {
+    max-width: none !important;
+    padding: 0 !important;
+}
+
+.output_prompt {
+    margin: 0 !important;
+}
+
+.post li {
+    font-size: 1.8rem;
+}
+
+.pager  {
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.pager li, .pager a {
+    font: 1.5rem "Open Sans", sans-serif;
+    color: #9EABB3;
+    text-align: center;
+    text-decoration: none;
+    list-style: none;
+    flex-grow: 1;
+}
+
+.postlist .listdate {
+     margin-right: 0.5em;
+}
+
+.main-header-content a {
+    text-decoration: none;
+}
+
+.main-header-content {
+    text-shadow: 1px 1px 1px #393069;
+}
+
+.page-description {
+    color: white !important;
+}
