@@ -1,7 +1,8 @@
-git+https://github.com/getnikola/nikola#egg=Nikola[extras]
-nltk
-rake-nltk
-librosa
-tensorflow
-matplotlib
-h5py
+nikola[extras]==8.2.0
+nltk==3.7
+rake-nltk==1.0.6
+
+#librosa==0.9.1
+#tensorflow==2.8.0
+#matplotlib==3.5.1
+#h5py
