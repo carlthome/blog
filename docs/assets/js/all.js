@@ -1,21 +1,2 @@
-function fancydates(fanciness, date_format) {
-    if (fanciness == 0) {
-        return;
-    }
-
-    var dates = document.querySelectorAll('.dt-published, .dt-updated');
-
-    var l = dates.length;
-
-    for (var i = 0; i < l; i++) {
-        var d = moment(dates[i].attributes.datetime.value);
-        var o;
-        if (fanciness == 1) {
-            o = d.local().format(date_format);
-        } else {
-            o = d.fromNow();
-        }
-        dates[i].innerHTML = o;
-    }
-}
+function fancydates(t,e){if(0!==t)for(var a=document.querySelectorAll(".dt-published, .dt-updated, .listdate"),o=a.length,l=0;l<o;l++){var r,i=luxon.DateTime.fromISO(a[l].attributes.datetime.value);r=1===t&&e.preset?i.toLocal().toLocaleString(luxon.DateTime[e.format]):1===t?i.toLocal().toFormat(e.format):i.toRelative(),a[l].innerHTML=r}}
 
