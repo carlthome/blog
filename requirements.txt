@@ -1,4 +1,4 @@
-nikola[extras]==8.2.0
+nikola[extras]==8.2.1
 nltk==3.7
 rake-nltk==1.0.6
 
