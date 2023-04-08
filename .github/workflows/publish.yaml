@@ -28,15 +28,15 @@ jobs:
           cache: 'pip'
       - run: pip install -r requirements.txt
       - uses: actions/configure-pages@v3
-
       - name: Build release manually with Nikola
         run: |
           cd src
           python download_nltk.py
           nikola build
           tar -zcvf github-pages.tar.gz output
-
       - uses: actions/upload-pages-artifact@v1
+        with:
+          path: output
 
   deploy:
     environment:
