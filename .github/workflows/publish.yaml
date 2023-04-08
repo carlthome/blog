@@ -31,11 +31,10 @@ jobs:
 
       - name: Build release manually with Nikola
         run: |
-          python src/download_nltk.py
-          cd src && nikola build
-          rm -r docs/
-          mv src/output/ docs/
-          tar -zcvf github-pages.tar.gz docs/
+          cd src
+          python download_nltk.py
+          nikola build
+          tar -zcvf github-pages.tar.gz src/output
 
       - uses: actions/upload-pages-artifact@v1
 
