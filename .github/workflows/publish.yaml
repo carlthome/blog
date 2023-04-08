@@ -34,7 +34,7 @@ jobs:
           cd src
           python download_nltk.py
           nikola build
-          tar -zcvf github-pages.tar.gz src/output
+          tar -zcvf github-pages.tar.gz output
 
       - uses: actions/upload-pages-artifact@v1
 
