@@ -2,7 +2,6 @@
 <%namespace name="base" file="base_helper.tmpl" import="*"/>
 <%namespace name="header" file="base_header.tmpl" import="*"/>
 <%namespace name="footer" file="base_footer.tmpl" import="*"/>
-<%namespace name="annotations" file="annotation_helper.tmpl"/>
 ${set_locale(lang)}
 ${base.html_headstart()}
 <%block name="extra_head">
@@ -36,6 +35,12 @@ ${header.html_navigation_links()}
                 % if TWITTER_URL:
                 <a class="bloglogo" href=${TWITTER_URL} target="_blank">
                     <span class="icon-twitter" style="color:white;font-size:2em"></span>
+                </a>
+                &nbsp;
+                % endif
+                % if LINKEDIN_URL:
+                <a  href="${LINKEDIN_URL}" target="_blank">
+                    <span class="icon-linkedin" style="color:white;font-size:2em"></span>
                 </a>
                 &nbsp;
                 % endif
