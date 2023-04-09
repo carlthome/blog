@@ -1,6 +1,6 @@
 # Blog
 
-My personal website.
+My personal blog, powered by [Nikola](https://getnikola.com/).
 
 ## Install
 
