@@ -1,0 +1,7 @@
+.prompt {
+    display: none;
+}
+
+.text_cell:first-child h2 {
+    display: none;
+}
