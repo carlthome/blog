@@ -5,7 +5,8 @@ __pycache__/
 .ipynb_checkpoints
 
 # Nikola
-posts/
+*.ipynb
+*.meta
 cache/
 output/
 .doit.db.db
