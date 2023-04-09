@@ -1,4 +1,5 @@
 # Python
+.direnv/
 .venv/
 __pycache__/
 .ipynb_checkpoints
