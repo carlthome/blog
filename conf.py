@@ -140,9 +140,13 @@ TRANSLATIONS_PATTERN = "{path}.{lang}.{ext}"
 
 NAVIGATION_LINKS = {
     DEFAULT_LANG: (
-        ("/archive.html", "Archive"),
-        ("/categories/", "Tags"),
-        ("/rss.xml", "RSS feed"),
+        ("/index.html", "Home", "fa fa-home"),
+        ("/archive.html", "Archives", "fa fa-folder-open"),
+        ("/categories/index.html", "Tags", "fa fa-tags"),
+        ("/rss.xml", "RSS", "fa fa-rss"),
+        ("https://carlthome.github.io", "About me", "fa fa-user"),
+        ("https://twitter.com/carlthome", "My Twitter", "fab fa-twitter"),
+        ("https://github.com/carlthome", "My Github", "fab fa-github"),
     ),
 }
 
@@ -152,7 +156,7 @@ NAVIGATION_LINKS = {
 NAVIGATION_ALT_LINKS = {DEFAULT_LANG: ()}
 
 # Name of the theme to use.
-THEME = "canterville"
+THEME = "custom"
 
 # A theme color. In default themes, it might be displayed by some browsers as
 # the browser UI color (eg. Chrome on Android). Other themes might also use it
@@ -282,7 +286,7 @@ TIMEZONE = "GMT+1"
 # 2 = using a string like “2 days ago” (JS, using Luxon)
 #
 # Your theme must support it, Bootstrap already does.
-# DATE_FANCINESS = 0
+DATE_FANCINESS = 2
 
 # Customize the locale/region used for a language.
 # For example, to use British instead of US English: LOCALES = {'en': 'en_GB'}
@@ -362,7 +366,7 @@ COMPILERS = {
 # Nikola supports logo display.  If you have one, you can put the URL here.
 # Final output is <img src="LOGO_URL" id="logo" alt="BLOG_TITLE">.
 # The URL may be relative to the site root.
-LOGO_URL = "https://getnikola.com/assets/img/logo.svg"
+# LOGO_URL = "assets/logo.svg"
 
 # When linking posts to social media, Nikola provides Open Graph metadata
 # which is used to show a nice preview. This includes an image preview
@@ -925,7 +929,7 @@ IMAGE_FOLDERS = {"images": "images"}
 # This list MAY be incomplete since pygments adds styles every now and then.
 # Check with list(pygments.styles.get_all_styles()) in an interpreter.
 #
-# CODE_COLOR_SCHEME = 'default'
+CODE_COLOR_SCHEME = "solarized-dark"
 
 # FAVICONS contains (name, file, size) tuples.
 # Used to create favicon link like this:
@@ -1405,12 +1409,7 @@ WARN_ABOUT_TAG_METADATA = False
 
 # Put in global_context things you want available on all your templates.
 # It can be anything, data, functions, modules, etc.
-GLOBAL_CONTEXT = {
-    "TWITTER_URL": "https://twitter.com/getnikola",
-    "GITHUB_URL": "https://github.com/getnikola",
-    "LINKEDIN_URL": None,
-    "BANNER_URL": "/assets/img/silk-road.jpg",
-}
+GLOBAL_CONTEXT = {}
 
 # Add functions here and they will be called with template
 # GLOBAL_CONTEXT as parameter when the template is about to be
