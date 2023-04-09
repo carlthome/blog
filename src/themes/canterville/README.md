@@ -9,6 +9,6 @@ The Silk Road image is CC licensed from
 
 Special variables
 
-* TWITTER_URL
-* GITHUB_URL
-* BANNER_URL
+- TWITTER_URL
+- GITHUB_URL
+- BANNER_URL
