@@ -7,7 +7,7 @@ from rake_nltk import Rake
 with open("gists.txt") as f:
     gist_ids = f.read().split()
 
-with urlopen(f"https://api.github.com/users/carlthome/gists") as url:
+with urlopen("https://api.github.com/users/carlthome/gists") as url:
     gists = json.loads(url.read().decode())
 
 os.makedirs("posts", exist_ok=True)
