@@ -5,7 +5,8 @@ My personal blog, powered by [Nikola](https://getnikola.com/).
 ## Install
 
 ```sh
-python -m venv .venv # or use direnv
+python -m venv .venv
+source .venv/bin/activate
 pip install -r requirements.txt
 ```
 
