@@ -1,12 +1,13 @@
 # Python
-.direnv/
-.venv/
-__pycache__/
+.direnv
+.venv
+__pycache__
 .ipynb_checkpoints
+.ruff_cache
 
 # Nikola
 *.ipynb
 *.meta
-cache/
-output/
+cache
+output
 .doit.db.db
