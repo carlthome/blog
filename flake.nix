@@ -12,5 +12,12 @@
         name = "nikola";
         packages = with pkgs; [ python3Packages.nikola ];
       });
+      packages.default = pkgs.writeShellApplication {
+        name = "blog";
+        runtimeInputs = with pkgs; [ python3Packages.nikola ];
+        text = ''
+          nikola build
+        '';
+      };
     });
 }
