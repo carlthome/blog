@@ -1,7 +1,85 @@
-.prompt {
-    display: none;
+@font-face {
+  font-family: "Fira Code";
+  src: url("../fonts/Fira_Code_v6.2/woff2/FiraCode-Regular.woff2")
+      format("woff2"),
+    url("../fonts/Fira_Code_v6.2/woff/FiraCode-Regular.woff") format("woff");
 }
 
-.text_cell:first-child h2 {
-    display: none;
+body {
+  background: white;
+}
+
+.page-content {
+  margin: 0 auto;
+  padding: 5vh 20vw;
+}
+
+.page-content > .content {
+  max-width: none;
+}
+
+@media (max-width: 773px) {
+  .page-content {
+    width: auto;
+  }
+}
+
+.page-content .content header .entry-title {
+  font-size: 1em;
+  line-height: 3em;
+  text-align: left;
+  margin: 0;
+}
+
+.social {
+  float: none;
+  position: relative;
+  width: 100%;
+  background: none;
+}
+
+.social ul {
+  display: flex;
+  justify-content: space-evenly;
+  width: 50%;
+  margin: 0 auto;
+  top: 0;
+  position: relative;
+}
+
+.social a i {
+  font-size: 2em;
+  color: black;
+}
+
+.social a {
+  opacity: 1;
+}
+
+.social a:hover {
+  color: black;
+}
+
+.social a:focus {
+  color: black;
+}
+
+.prompt {
+  display: none;
+}
+.entry-content .cell {
+  margin: 1em 0em;
+  padding: 0;
+}
+
+.entry-content .code_cell div.input_area > div.highlight > pre {
+  margin: 0;
+  padding: 1em;
+  border-radius: 0.5em;
+  border-style: none;
+  font-family: "Fira Code";
+}
+
+.entry-content .code_cell div.output_subarea {
+  max-width: none;
 }
