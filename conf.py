@@ -140,13 +140,16 @@ TRANSLATIONS_PATTERN = "{path}.{lang}.{ext}"
 
 NAVIGATION_LINKS = {
     DEFAULT_LANG: (
-        ("/index.html", "Home", "fa fa-home"),
-        ("/archive.html", "Archives", "fa fa-folder-open"),
-        ("/categories/index.html", "Tags", "fa fa-tags"),
-        ("/rss.xml", "RSS", "fa fa-rss"),
+        # ("/index.html", "Home", "fa fa-home"),
+        # ("/pages/index.html", "Pages", "fa fa-file"),
+        # ("/archive.html", "Archives", "fa fa-archive"),
+        # ("/categories/index.html", "Tags", "fa fa-tags"),
+        # ("/rss.xml", "RSS", "fa fa-rss"),
         ("https://carlthome.github.io", "About me", "fa fa-user"),
-        ("https://twitter.com/carlthome", "My Twitter", "fab fa-twitter"),
-        ("https://github.com/carlthome", "My Github", "fab fa-github"),
+        # ("https://twitter.com/carlthome", "Twitter", "fab fa-twitter"),
+        # ("https://facebook.com/carlthome", "Facebook", "fab fa-facebook"),
+        ("https://github.com/carlthome", "Github", "fab fa-github"),
+        ("https://linkedin.com/in/carlthome", "LinkedIn", "fab fa-linkedin"),
     ),
 }
 
