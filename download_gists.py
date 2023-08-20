@@ -2,6 +2,7 @@ import os
 import json
 from urllib.request import urlopen, urlretrieve
 
+import tqdm.auto as tqdm
 from rake_nltk import Rake
 
 with open("gists.txt") as f:
@@ -11,7 +12,7 @@ with urlopen("https://api.github.com/users/carlthome/gists") as url:
     gists = json.loads(url.read().decode())
 
 os.makedirs("posts", exist_ok=True)
-for gist in gists:
+for gist in tqdm.tqdm(gists, desc="Downloading gists"):
     if gist["id"] not in gist_ids:
         continue
 
