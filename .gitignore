@@ -10,4 +10,4 @@ __pycache__
 *.meta
 cache
 output
-.doit.db.db
+.doit.db
