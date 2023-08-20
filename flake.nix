@@ -10,11 +10,21 @@
     in {
       devShells.default = (pkgs.mkShell {
         name = "nikola";
-        packages = with pkgs; [ python3Packages.nikola ];
+        packages = with pkgs; [
+          python3Packages.nikola
+          python3Packages.nltk
+          python3Packages.tqdm
+          (callPackage ./rake_nltk.nix { })
+        ];
       });
+
       packages.default = pkgs.writeShellApplication {
         name = "blog";
-        runtimeInputs = with pkgs; [ python3Packages.nikola ];
+        runtimeInputs = with pkgs; [
+          python3Packages.nikola
+          python3Packages.tqdm
+          (callPackage ./rake_nltk.nix { })
+        ];
         text = ''
           nikola build
         '';

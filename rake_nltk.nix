@@ -10,12 +10,15 @@ pkgs.python3Packages.buildPythonPackage {
   src = fetchPypi {
     pname = "rake-nltk";
     version = "1.0.6";
-    hash = "";
+    hash = "sha256-eBPWgLLOd7Uc2sF1f4Aah/9HaCydvSmCrqO2ZzA0YSI=";
   };
-
 
   propagatedBuildInputs = with python3Packages; [
     nltk
+  ];
+
+  pythonImportsCheck = [
+    "rake_nltk"
   ];
 
   meta = {
