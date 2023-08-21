@@ -5,29 +5,39 @@ from urllib.request import urlopen, urlretrieve
 import tqdm.auto as tqdm
 from rake_nltk import Rake
 
-with open("gists.txt") as f:
-    gist_ids = f.read().split()
+USER = "carlthome"
+OUTPUT_DIRECTORY = "posts"
 
-with urlopen("https://api.github.com/users/carlthome/gists") as url:
+# List all gists for the given USER.
+with urlopen(f"https://api.github.com/users/{USER}/gists") as url:
     gists = json.loads(url.read().decode())
 
-os.makedirs("posts", exist_ok=True)
+# Create output directory.
+os.makedirs(OUTPUT_DIRECTORY, exist_ok=True)
+
 for gist in tqdm.tqdm(gists, desc="Downloading gists"):
-    if gist["id"] not in gist_ids:
+    name, metadata = list(gist["files"].items())[0]
+    title, extension = os.path.splitext(name)
+
+    # Skip gists that are not Jupyter Notebooks.
+    if extension != "ipynb":
         continue
 
-    name, metadata = list(gist["files"].items())[0]
+    # Download notebook.
     urlretrieve(metadata["raw_url"], f"posts/{name}")
 
-    title = os.path.splitext(name)[0]
+    # Collect post metadata.
     description = gist["description"]
     slug = title.replace(" ", "-").lower()
+    metadata = f"{title}. {description}"
 
+    # Extract keywords from metadata.
     r = Rake()
-    r.extract_keywords_from_text(f"{title}. {description}")
+    r.extract_keywords_from_text(metadata)
     tags = ",".join(r.get_ranked_phrases()[:3])
 
-    with open(os.path.join("posts", title + ".meta"), "w") as f:
+    # Write post metadata file.
+    with open(os.path.join(OUTPUT_DIRECTORY, title + ".meta"), "w") as f:
         f.write(
             f"""\
 .. title: {title}
