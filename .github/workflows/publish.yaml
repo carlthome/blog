@@ -38,7 +38,7 @@ jobs:
         run: python download_kaggle_kernels.py
         env:
           KAGGLE_KEY: ${{ secrets.KAGGLE_KEY }}
-          KAGGLE_USER: ${{ vars.KAGGLE_USERNAME }}
+          KAGGLE_USERNAME: ${{ vars.KAGGLE_USERNAME }}
 
       - name: Download Jupyter Notebooks from gist.github.com
         run: python download_gists.py
