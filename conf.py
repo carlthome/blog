@@ -142,7 +142,7 @@ NAVIGATION_LINKS = {
     DEFAULT_LANG: (
         # ("/index.html", "Home", "fa fa-home"),
         # ("/pages/index.html", "Pages", "fa fa-file"),
-        # ("/archive.html", "Archives", "fa fa-archive"),
+        ("/archive.html", "Archives", "fa fa-folder-open"),
         # ("/categories/index.html", "Tags", "fa fa-tags"),
         # ("/rss.xml", "RSS", "fa fa-rss"),
         ("https://carlthome.github.io", "About me", "fa fa-user"),
