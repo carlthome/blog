@@ -34,11 +34,14 @@ jobs:
       - name: Download NLTK dependencies
         run: python download_nltk.py
 
-      - name: Download Jupyter Notebooks from gist.github.com
-        run: python download_gists.py
-
       - name: Download Jupyter Notebooks from Kaggle
         run: python download_kaggle_kernels.py
+        env:
+          KAGGLE_KEY: ${{ secrets.KAGGLE_KEY }}
+          KAGGLE_USER: ${{ vars.KAGGLE_USERNAME }}
+
+      - name: Download Jupyter Notebooks from gist.github.com
+        run: python download_gists.py
 
       - name: Build release manually with Nikola
         run: nikola build
