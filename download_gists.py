@@ -20,7 +20,7 @@ for gist in tqdm.tqdm(gists, desc="Downloading gists"):
     title, extension = os.path.splitext(name)
 
     # Skip gists that are not Jupyter Notebooks.
-    if extension != "ipynb":
+    if extension != ".ipynb":
         continue
 
     # Download notebook.
