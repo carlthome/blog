@@ -1,13 +1,20 @@
-# Python
+# General
 .direnv
+.env
+
+# Python
 .venv
 __pycache__
 .ipynb_checkpoints
 .ruff_cache
 
 # Nikola
-*.ipynb
-*.meta
+posts/*.ipynb
+posts/*.meta
+posts/*.py
 cache
 output
 .doit.db
+
+# Nix
+result

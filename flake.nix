@@ -14,6 +14,7 @@
           python3Packages.nikola
           python3Packages.nltk
           python3Packages.tqdm
+          python3Packages.kaggle
           (callPackage ./rake_nltk.nix { })
         ];
       });
@@ -22,7 +23,9 @@
         name = "blog";
         runtimeInputs = with pkgs; [
           python3Packages.nikola
+          python3Packages.nltk
           python3Packages.tqdm
+          python3Packages.kaggle
           (callPackage ./rake_nltk.nix { })
         ];
         text = ''

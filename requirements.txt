@@ -1,3 +1,4 @@
-nikola[extras]==8.2.3
-nltk==3.7
-rake-nltk==1.0.6
+nikola[extras]~=8.2.0
+nltk~=3.7.0
+rake-nltk~=1.0.0
+kaggle~=1.5.0
