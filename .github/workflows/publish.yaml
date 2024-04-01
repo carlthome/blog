@@ -47,7 +47,7 @@ jobs:
       - name: Build release manually with Nikola
         run: make build
 
-      - uses: actions/configure-pages@v4
+      - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
         with:
           path: output
