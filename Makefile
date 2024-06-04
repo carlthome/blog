@@ -1,6 +1,6 @@
 build:
 	echo "Build phase..."
-	./strip-widgets.sh
+	bash strip-widgets.sh
 	nikola build
 
 install:
